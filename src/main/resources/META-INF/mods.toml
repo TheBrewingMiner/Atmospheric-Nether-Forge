@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="All Rights Reserved"
+[[mods]]
+modId="atmospheric_nether"
+version="1.3.0-1.19.2"
+displayName="Atmospheric Nether"
+#logoFile="pack.png"
+credits="Thanks to KaupenJoe and his tutorials."
+authors="TheBrewingMiner"
+
+description='''
+
+An atmospheric new-ish Nether!
+
+'''
+
+[[dependencies.atmospheric_nether]]
+modId="forge"
+mandatory=true
+versionRange="[43,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.atmospheric_nether]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.19.2,1.20)"
+ordering="NONE"
+side="BOTH"
