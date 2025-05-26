@@ -52,7 +52,7 @@
         "maxCount": 4
       },
       {
-        "type": "minecraft:hoglin",
+        "type": "minecraft:zoglin",
         "weight": 5,
         "minCount": 1,
         "maxCount": 2
@@ -69,7 +69,7 @@
     "water_creature": []
   },
   "spawn_costs": {
-    "minecraft:hoglin": {
+    "minecraft:zoglin": {
       "energy_budget": 0.14,
       "charge": 0.8
     },
