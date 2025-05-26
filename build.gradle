@@ -103,8 +103,8 @@ dependencies {
 
 mixin {
     // MixinGradle Settings
-    add sourceSets.main, 'mixins.atmospheric_nether.refmap.json'
-    config 'mixins.atmospheric_nether.json'
+    add sourceSets.main, 'atmosphericnether.refmap.json'
+    config 'atmosphericnether.mixins.json'
 
     debug.verbose = true
     debug.export = true
