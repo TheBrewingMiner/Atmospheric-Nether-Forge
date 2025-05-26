@@ -25,7 +25,7 @@ public abstract class ZoglinSpawnCheckingMixin extends Monster implements Enemy,
 
     @Unique
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor levelAccessor, DifficultyInstance difficulty, MobSpawnType spawnType, @Nullable SpawnGroupData groupData, @Nullable CompoundTag tag) {
-        if (levelAccessor.getRandom().nextFloat() < 0.2F) {
+        if (levelAccessor.getRandom().nextFloat() < 0.35F) {
             this.setBaby(true);
         }
 
