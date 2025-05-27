@@ -1,6 +1,5 @@
 package net.thebrewingminer.atmosphericnether;
 
-import com.mojang.logging.LogUtils;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -11,11 +10,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.thebrewingminer.atmosphericnether.custom.entity.ZoglinHelper;
-import net.thebrewingminer.atmosphericnether.custom.events.EndermanAggroHandler;
-import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(AtmosphericNether.MODID)
