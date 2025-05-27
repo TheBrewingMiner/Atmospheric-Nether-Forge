@@ -22,16 +22,10 @@ import org.slf4j.Logger;
 public class AtmosphericNether {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "atmospheric_nether";
-    // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
 
-    public AtmosphericNether(FMLJavaModLoadingContext context){
-        IEventBus modEventBus = context.getModEventBus();
-
-        // Register the commonSetup method for modloading
+    public AtmosphericNether(){
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
-
-        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 
@@ -46,19 +40,9 @@ public class AtmosphericNether {
         });
     }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event){
-        // Do something when the server starts
-        LOGGER.info("HELLO from server starting");
-    }
-
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event){
-
-        }
+        public static void onClientSetup(FMLClientSetupEvent event){}
     }
 }
