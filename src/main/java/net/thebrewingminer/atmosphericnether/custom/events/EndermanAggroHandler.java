@@ -50,9 +50,7 @@ public class EndermanAggroHandler {
         if (!(event.getEntity().getLevel() instanceof ServerLevel)) return;
         if (!enderman.getPersistentData().getBoolean("SpawnedInDisturbedBiome")) return;
 
-        enderman.setAggressive(true);
-
-        final int cooldownCount = 300;
+        final int cooldownCount = 140;
         if (enderman.getTarget() instanceof Player) {
             enderman.getPersistentData().putInt("AggroCooldown", cooldownCount);  // Set a cooldown of 15 seconds if targeting a player
             return;                                                                         // Stop logic here.
@@ -64,6 +62,7 @@ public class EndermanAggroHandler {
             return;
         }
 
+        enderman.setAggressive(true);
         int horizontalOffset = 24;
         int verticalOffset = horizontalOffset/2;
         double closestDist = Double.MAX_VALUE;
