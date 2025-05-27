@@ -3,7 +3,7 @@
   "minVersion": "0.8",
   "package": "net.thebrewingminer.atmosphericnether.mixin",
   "compatibilityLevel": "JAVA_17",
-  "refmap": "atmospheric_nether.refmap.json",
+  "refmap": "atmosphericnether.refmap.json",
   "mixins": [
     "AquiferMixin",
     "ZoglinSpawnCheckingMixin"
