@@ -14,6 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.thebrewingminer.atmosphericnether.custom.entity.ZoglinHelper;
+import net.thebrewingminer.atmosphericnether.custom.events.EndermanAggroHandler;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
