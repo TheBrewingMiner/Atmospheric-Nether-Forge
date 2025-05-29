@@ -1,4 +1,4 @@
-package net.thebrewingminer.atmosphericnether.custom.feature;
+package net.thebrewingminer.atmosphericnether.custom.feature.speleothem;
 
 import java.util.function.Consumer;
 import net.minecraft.core.BlockPos;

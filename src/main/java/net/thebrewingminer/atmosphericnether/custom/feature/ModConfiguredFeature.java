@@ -6,6 +6,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thebrewingminer.atmosphericnether.AtmosphericNether;
+import net.thebrewingminer.atmosphericnether.custom.feature.speleothem.CustomizableLargeDripstoneConfiguration;
+import net.thebrewingminer.atmosphericnether.custom.feature.speleothem.CustomizableLargeDripstoneFeature;
 
 public class ModConfiguredFeature {
 

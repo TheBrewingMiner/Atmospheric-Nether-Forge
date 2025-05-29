@@ -1,4 +1,4 @@
-package net.thebrewingminer.atmosphericnether.custom.feature;
+package net.thebrewingminer.atmosphericnether.custom.feature.speleothem;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.core.BlockPos;
