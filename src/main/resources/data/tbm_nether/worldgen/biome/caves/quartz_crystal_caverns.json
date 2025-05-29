@@ -99,7 +99,8 @@
       [],
       [],
       [
-        "minecraft:basalt_pillar"
+        "minecraft:basalt_pillar",
+        "tbm_nether:cave/quartz_large_dripstone"
       ],
       [],
       [],
