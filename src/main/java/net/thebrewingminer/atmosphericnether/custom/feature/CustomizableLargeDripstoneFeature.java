@@ -44,7 +44,7 @@ public class CustomizableLargeDripstoneFeature extends Feature<CustomizableLarge
         if (!CustomizableDripstoneUtils.isEmptyOrWater(worldgenLevel, blockPos)) {
             return false;
         } else {
-            Optional<Column> column = Column.scan(worldgenLevel, blockPos, config.floorToCeilingSearchRange, CustomizableDripstoneUtils::isEmptyOrWater, CustomizableDripstoneUtils::isDripstoneBaseOrLava);
+            Optional<Column> column = Column.scan(worldgenLevel, blockPos, config.floorToCeilingSearchRange, CustomizableDripstoneUtils::isEmptyOrWater, (level) -> CustomizableDripstoneUtils.isDripstoneBaseOrLava(level, suitableBaseTag));
             if (column.isPresent() && column.get() instanceof Column.Range) {
                 Column.Range columnRange = (Column.Range)column.get();
                 if (columnRange.height() < 4) {
