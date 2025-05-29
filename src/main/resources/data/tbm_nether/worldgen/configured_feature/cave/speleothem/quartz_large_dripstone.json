@@ -4,7 +4,7 @@
     "block": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:smooth_quartz_block"
+        "Name": "minecraft:smooth_quartz"
       }
     },
     "base_tag": "minecraft:base_stone_nether",

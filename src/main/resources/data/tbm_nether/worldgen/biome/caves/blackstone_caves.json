@@ -89,7 +89,8 @@
       [],
       [],
       [
-        "tbm_nether:cave/glowstone_large_dripstone"
+        "tbm_nether:cave/speleothem/glowstone_large_dripstone",
+        "tbm_nether:cave/speleothem/blackstone_large_dripstone"
       ],
       [],
       [],

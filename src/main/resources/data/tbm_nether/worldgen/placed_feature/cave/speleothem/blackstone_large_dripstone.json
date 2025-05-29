@@ -1,13 +1,13 @@
 {
-  "feature": "tbm_nether:cave/glowstone_large_dripstone",
+  "feature": "tbm_nether:cave/speleothem/blackstone_large_dripstone",
   "placement": [
     {
       "type": "minecraft:count",
       "count": {
-        "type": "biased_to_bottom",
+        "type": "minecraft:uniform",
         "value": {
-          "max_inclusive": 48,
-          "min_inclusive": 10
+          "min_inclusive": 4,
+          "max_inclusive": 12
         }
       }
     },
