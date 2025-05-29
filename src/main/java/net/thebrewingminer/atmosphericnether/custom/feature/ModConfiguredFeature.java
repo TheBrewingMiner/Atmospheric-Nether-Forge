@@ -12,8 +12,8 @@ public class ModConfiguredFeature {
         public static final DeferredRegister<Feature<?>> FEATURES =
         DeferredRegister.create(ForgeRegistries.FEATURES, AtmosphericNether.MODID);
 
-        public static final RegistryObject<Feature<CustomizableLargeDripstoneConfiguration>> CUSTOMIZABLE_DRIPSTONE =
-                FEATURES.register("customizable_dripstone", () ->
+        public static final RegistryObject<Feature<CustomizableLargeDripstoneConfiguration>> CUSTOMIZABLE_LARGE_DRIPSTONE =
+                FEATURES.register("customizable_large_dripstone", () ->
                         new CustomizableLargeDripstoneFeature(CustomizableLargeDripstoneConfiguration.CODEC));
 
         public static void register(IEventBus eventBus) {
