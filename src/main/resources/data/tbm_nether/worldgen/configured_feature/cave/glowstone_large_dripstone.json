@@ -7,7 +7,7 @@
         "Name": "minecraft:glowstone"
       }
     },
-    "base_tag": "minecraft:base_stone_nether",
+    "base_tag": "tbm_nether:glowstone_speleothem_base_block",
     "column_radius": {
       "type": "minecraft:uniform",
       "value": {
