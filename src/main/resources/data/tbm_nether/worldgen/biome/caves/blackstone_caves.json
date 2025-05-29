@@ -88,7 +88,9 @@
     "features": [
       [],
       [],
-      [],
+      [
+        "tbm_nether:cave/glowstone_large_dripstone"
+      ],
       [],
       [],
       [],
