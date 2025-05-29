@@ -12,6 +12,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.thebrewingminer.atmosphericnether.custom.entity.ZoglinHelper;
+import net.thebrewingminer.atmosphericnether.custom.feature.ModConfiguredFeature;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(AtmosphericNether.MODID)
@@ -22,6 +23,7 @@ public class AtmosphericNether {
     public AtmosphericNether(){
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
+        ModConfiguredFeature.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
