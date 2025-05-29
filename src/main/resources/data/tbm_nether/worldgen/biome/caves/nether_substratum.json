@@ -86,7 +86,9 @@
   "features": [
     [],
     [],
-    [],
+    [
+      "tbm_nether:cave/speleothem/gravel_pillar"
+    ],
     [],
     [],
     [],
