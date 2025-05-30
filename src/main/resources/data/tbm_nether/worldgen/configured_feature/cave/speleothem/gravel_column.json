@@ -4,10 +4,10 @@
     "block": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:glowstone"
+        "Name": "minecraft:gravel"
       }
     },
-    "base_tag": "tbm_nether:glowstone_speleothem_base_block",
+    "base_tag": "tbm_nether:gravel_column_base_block",
     "column_radius": {
       "type": "minecraft:uniform",
       "value": {

@@ -4,10 +4,10 @@
     "block": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:gravel"
+        "Name": "minecraft:magma_block"
       }
     },
-    "base_tag": "tbm_nether:gravel_pillar_base_block",
+    "base_tag": "tbm_nether:magma_pillar_base_block",
     "column_radius": {
       "type": "minecraft:uniform",
       "value": {

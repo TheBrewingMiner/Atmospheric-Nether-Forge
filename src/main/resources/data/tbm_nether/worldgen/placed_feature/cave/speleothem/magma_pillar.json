@@ -1,13 +1,13 @@
 {
-  "feature": "tbm_nether:cave/speleothem/gravel_pillar",
+  "feature": "tbm_nether:cave/speleothem/magma_pillar",
   "placement": [
     {
       "type": "minecraft:count",
       "count": {
         "type": "minecraft:uniform",
         "value": {
-          "min_inclusive": 3,
-          "max_inclusive": 17
+          "min_inclusive": 4,
+          "max_inclusive": 9
         }
       }
     },

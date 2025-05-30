@@ -1,5 +1,5 @@
 {
-  "feature": "tbm_nether:cave/speleothem/glowstone_large_dripstone",
+  "feature": "tbm_nether:cave/speleothem/glowstone_deposition",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
