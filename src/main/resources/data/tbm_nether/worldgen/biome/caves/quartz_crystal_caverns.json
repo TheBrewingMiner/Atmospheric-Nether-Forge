@@ -119,6 +119,7 @@
         "minecraft:ore_blackstone",
         "minecraft:ore_gold_nether",
         "tbm_nether:cave/ore/quartz_ore_extra",
+        "tbm_nether:cave/ore/ceiling_quartz",
         "minecraft:ore_quartz_nether",
         "minecraft:ore_ancient_debris_large",
         "minecraft:ore_debris_small"
