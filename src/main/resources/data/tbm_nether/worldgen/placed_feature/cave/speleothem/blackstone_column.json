@@ -1,5 +1,5 @@
 {
-  "feature": "tbm_nether:cave/speleothem/blackstone_large_dripstone",
+  "feature": "tbm_nether:cave/speleothem/blackstone_column",
   "placement": [
     {
       "type": "minecraft:count",
