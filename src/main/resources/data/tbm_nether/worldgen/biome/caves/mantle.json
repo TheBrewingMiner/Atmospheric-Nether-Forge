@@ -61,7 +61,9 @@
     "features": [
       [],
       [],
-      [],
+      [
+        "tbm_nether:cave/speleothem/magma_column"
+      ],
       [],
       [
         "minecraft:delta",
