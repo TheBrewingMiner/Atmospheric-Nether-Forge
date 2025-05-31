@@ -1,32 +1,3 @@
-#modLoader="javafml"
-#loaderVersion="[50,)"
-#license="${mod_license}"
-#
-#[[mods]]
-#modId="atmospheric_nether"
-#version="2.0.0"
-#displayName="Atmospheric Nether"
-#logoFile="pack.png"
-#issueTrackerURL = "https://github.com/TheBrewingMiner/Atmospheric-Nether-Mod/issues"
-#
-#credits="Thanks to KaupenJoe and his tutorials."
-#authors="${mod_authors}"
-#description="${mod_description}"
-#
-#[[dependencies.atmospheric_nether]]
-#modId="forge"
-#mandatory=true
-#versionRange="[50,)"
-#ordering="NONE"
-#side="BOTH"
-#
-#[[dependencies.atmospheric_nether]]
-#modId="minecraft"
-#mandatory=true
-#versionRange="[1.20.6, 1.21)"
-#ordering="NONE"
-#side="BOTH"
-
 modLoader="javafml"
 loaderVersion="${loader_version_range}"
 license="${mod_license}"
@@ -37,6 +8,7 @@ version="${mod_version}"
 displayName="${mod_name}"
 authors="${mod_authors}"
 description='''${mod_description}'''
+issueTrackerURL = "https://github.com/TheBrewingMiner/Atmospheric-Nether-Mod/issues"
 
 [[dependencies.${mod_id}]]
 modId="forge"
