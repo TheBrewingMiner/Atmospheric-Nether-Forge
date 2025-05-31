@@ -1,6 +1,5 @@
 package net.thebrewingminer.atmosphericnether.mixin;
 
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobSpawnType;
@@ -24,7 +23,7 @@ public abstract class ZoglinSpawnCheckingMixin extends Monster implements Enemy,
     }
 
     @Unique
-    public SpawnGroupData finalizeSpawn(ServerLevelAccessor levelAccessor, DifficultyInstance difficulty, MobSpawnType spawnType, @Nullable SpawnGroupData groupData, @Nullable CompoundTag tag) {
+    public SpawnGroupData finalizeSpawn(ServerLevelAccessor levelAccessor, DifficultyInstance difficulty, MobSpawnType spawnType, @Nullable SpawnGroupData groupData) {
         if (levelAccessor.getRandom().nextFloat() < 0.35F) {
             this.setBaby(true);
         }
