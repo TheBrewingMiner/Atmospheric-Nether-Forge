@@ -2,7 +2,7 @@ package net.thebrewingminer.atmosphericnether.custom.feature.speleothem;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
@@ -16,7 +16,7 @@ public class CustomizableLargeDripstoneConfiguration extends LargeDripstoneConfi
     public static final Codec<CustomizableLargeDripstoneConfiguration> CODEC = RecordCodecBuilder.create(instance ->
             instance.group(
                     BlockStateProvider.CODEC.fieldOf("block").forGetter(cfg -> cfg.block),
-                    ResourceLocation.CODEC.xmap(id -> TagKey.create(Registry.BLOCK_REGISTRY, id), TagKey::location).fieldOf("base_tag").orElse(BlockTags.BASE_STONE_OVERWORLD).forGetter(cfg -> cfg.baseTag),
+                    ResourceLocation.CODEC.xmap(id -> TagKey.create(Registries.BLOCK, id), TagKey::location).fieldOf("base_tag").orElse(BlockTags.BASE_STONE_OVERWORLD).forGetter(cfg -> cfg.baseTag),
                     IntProvider.codec(1, 60).fieldOf("column_radius").forGetter(cfg -> cfg.columnRadius),
                     FloatProvider.codec(0.1F, 10.0F).fieldOf("stalactite_bluntness").forGetter(cfg -> cfg.stalactiteBluntness),
                     FloatProvider.codec(0.1F, 10.0F).fieldOf("stalagmite_bluntness").forGetter(cfg -> cfg.stalagmiteBluntness),
