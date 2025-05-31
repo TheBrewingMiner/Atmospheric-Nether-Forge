@@ -201,7 +201,7 @@ public class CustomizableLargeDripstoneFeature extends Feature<CustomizableLarge
             } else {
                 int verticalOffset = this.originY - pos.getY();
                 Vec3 windOffset = this.windSpeed.scale(verticalOffset);
-                return pos.offset(windOffset.x, 0.0, windOffset.z);
+                return pos.offset(Mth.floor(windOffset.x), 0, Mth.floor(windOffset.z));
             }
         }
     }
