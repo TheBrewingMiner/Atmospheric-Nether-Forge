@@ -1,23 +1,16 @@
 modLoader="javafml"
-
 loaderVersion="${loader_version_range}"
-
 license="${mod_license}"
 
 [[mods]]
 modId="${mod_id}"
-
 version="${mod_version}"
-
 displayName="${mod_name}"
-
 logoFile="pack.png"
-issueTracker = "https://github.com/TheBrewingMiner/Atmospheric-Nether-Mod/issues"
+issueTrackerURL = "https://github.com/TheBrewingMiner/Atmospheric-Nether-Mod/issues"
 
 credits="Thanks to KaupenJoe and his tutorials."
-
 authors="${mod_authors}"
-
 description="${mod_description}"
 
 [[dependencies.${mod_id}]]
