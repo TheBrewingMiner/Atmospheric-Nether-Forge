@@ -29,7 +29,7 @@ public abstract class ZoglinSpawnCheckingMixin extends Monster implements Enemy,
             this.setBaby(true);
         }
 
-        return super.finalizeSpawn(levelAccessor, difficulty, spawnType, groupData, tag);
+        return super.finalizeSpawn(levelAccessor, difficulty, spawnType, groupData);
     }
     
 }
