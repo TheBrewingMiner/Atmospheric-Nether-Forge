@@ -31,8 +31,8 @@ public class EndermanAggroHandler {
         if (!(spawnEvent.getLevel() instanceof ServerLevel serverLevel)) return;
 
         ResourceKey<Biome> biomeKey = serverLevel.getBiome(enderman.blockPosition()).unwrapKey().orElse(null);
-        ResourceLocation dispiritedForest = new ResourceLocation("tbm_nether", "forests/dispirited_forest");
-        ResourceLocation oldDispiritedForest = new ResourceLocation("tbm_nether", "forests/old_growth_dispirited_forest");
+        ResourceLocation dispiritedForest = ResourceLocation.tryParse("tbm_nether:forests/dispirited_forest");
+        ResourceLocation oldDispiritedForest = ResourceLocation.tryParse("tbm_nether:forests/old_growth_dispirited_forest");
 
         if (biomeKey != null){
             ResourceLocation key = biomeKey.location();
@@ -47,7 +47,7 @@ public class EndermanAggroHandler {
 
         // Base cases (Not enderman nor disturbed one, or already hostile one).
         if (!(event.getEntity() instanceof EnderMan enderman)) return;
-        if (!(event.getEntity().getLevel() instanceof ServerLevel)) return;
+        if (!(event.getEntity().level() instanceof ServerLevel)) return;
         if (!enderman.getPersistentData().getBoolean("SpawnedInDisturbedBiome")) return;
 
         final int cooldownCount = 180;
@@ -69,7 +69,7 @@ public class EndermanAggroHandler {
         Player closestPlayer = null;
 
         // Check around the entity for the nearest valid player to target.
-        List<Player> players = enderman.getLevel().getEntitiesOfClass(Player.class, new AABB(
+        List<Player> players = enderman.level().getEntitiesOfClass(Player.class, new AABB(
             enderman.getX() - horizontalOffset, enderman.getY() - verticalOffset, enderman.getZ() - horizontalOffset,
             enderman.getX() + horizontalOffset, enderman.getY() + verticalOffset, enderman.getZ() + horizontalOffset));
 
@@ -90,7 +90,7 @@ public class EndermanAggroHandler {
         // Play aggressive sounds at the enderman and set its target to the closest player.
         if (closestPlayer != null) {
             enderman.playStareSound();
-            enderman.getLevel().playSound(
+            enderman.level().playSound(
                     null,
                     enderman.getX(),
                     enderman.getY(),
