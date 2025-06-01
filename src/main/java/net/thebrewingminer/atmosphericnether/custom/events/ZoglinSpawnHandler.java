@@ -10,7 +10,7 @@ import net.thebrewingminer.atmosphericnether.AtmosphericNether;
 import net.thebrewingminer.atmosphericnether.custom.entity.ZoglinHelper;
 
 @Mod.EventBusSubscriber(modid = AtmosphericNether.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ModEvents {
+public class ZoglinSpawnHandler {
 
     @SubscribeEvent
     public static void naturalZoglinSpawning(SpawnPlacementRegisterEvent event) {
