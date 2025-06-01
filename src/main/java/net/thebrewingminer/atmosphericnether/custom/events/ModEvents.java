@@ -5,8 +5,11 @@ import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.event.entity.SpawnPlacementRegisterEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.thebrewingminer.atmosphericnether.AtmosphericNether;
 import net.thebrewingminer.atmosphericnether.custom.entity.ZoglinHelper;
 
+@Mod.EventBusSubscriber(modid = AtmosphericNether.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModEvents {
 
     @SubscribeEvent
