@@ -16,8 +16,8 @@ public class AtmosphericNether {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "atmospheric_nether";
 
-    public AtmosphericNether(){
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public AtmosphericNether(FMLJavaModLoadingContext context){
+        IEventBus modEventBus = context.getModEventBus();
         modEventBus.addListener(this::commonSetup);
         ModConfiguredFeature.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
