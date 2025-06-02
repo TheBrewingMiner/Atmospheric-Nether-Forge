@@ -48,7 +48,7 @@ public class EndermanAggroHandler {
         // Base cases (Not enderman nor disturbed one, or already hostile one).
         if (!(event.getEntity() instanceof EnderMan enderman)) return;
         if (!(event.getEntity().level() instanceof ServerLevel)) return;
-        if (!enderman.getPersistentData().getBoolean("SpawnedInDisturbedBiome")) return;
+        if (!enderman.getPersistentData().getBoolean("SpawnedInDisturbedBiome").orElse(false)) return;
 
         final int cooldownCount = 180;
         if (enderman.getTarget() instanceof Player) {
@@ -56,7 +56,7 @@ public class EndermanAggroHandler {
             return;                                                                         // Stop logic here.
         }
 
-        int cooldown = enderman.getPersistentData().getInt("AggroCooldown");
+        int cooldown = enderman.getPersistentData().getInt("AggroCooldown").orElse(0);
         if (cooldown > 0) {
             enderman.getPersistentData().putInt("AggroCooldown", cooldown - 1); // Count down when nobody is targeted
             return;
