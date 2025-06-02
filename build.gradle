@@ -1,5 +1,4 @@
 plugins {
-    id 'eclipse'
     id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0.24,6.2)'
@@ -28,7 +27,6 @@ minecraft {
         // applies to all the run configs below
         configureEach {
             workingDirectory project.file('run')
-
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
         }
@@ -47,8 +45,10 @@ minecraft {
         }
 
         data {
+            // example of overriding the workingDirectory set in configureEach above
             workingDirectory project.file('run-data')
 
+            // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
             args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
         }
     }
@@ -61,7 +61,6 @@ repositories {}
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    implementation('net.sf.jopt-simple:jopt-simple:5.0.4') { version { strictly '5.0.4' } }
 }
 
 mixin {
@@ -85,7 +84,6 @@ tasks.named('processResources', ProcessResources).configure {
     }
 }
 
-// Example for how to get properties into the manifest for reading at runtime.
 tasks.named('jar', Jar).configure {
     manifest {
         attributes([
@@ -100,7 +98,6 @@ tasks.named('jar', Jar).configure {
     }
 }
 
-// Example configuration to allow publishing using the maven-publish plugin
 publishing {
     publications {
         register('mavenJava', MavenPublication) {
@@ -118,7 +115,9 @@ tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
 
-idea.module { downloadJavadoc = downloadSources = true }
+idea.module {
+    downloadJavadoc = downloadSources = true
+}
 
 sourceSets.each {
     def dir = layout.buildDirectory.dir("sourcesSets/$it.name")
