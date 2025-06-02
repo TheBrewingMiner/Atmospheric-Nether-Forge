@@ -5,8 +5,7 @@
   "compatibilityLevel": "JAVA_21",
   "refmap": "atmosphericnether.refmap.json",
   "mixins": [
-    "AquiferMixin",
-    "ZoglinSpawnCheckingMixin"
+    "AquiferMixin"
   ],
   "injectors": {
     "defaultRequire": 1
