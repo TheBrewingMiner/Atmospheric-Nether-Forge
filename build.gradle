@@ -2,7 +2,7 @@ plugins {
     id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0.24,6.2)'
-    id 'org.spongepowered.mixin' version '0.7.+'
+//    id 'org.spongepowered.mixin' version '0.7.+'
 }
 
 version = mod_version
@@ -63,11 +63,11 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 }
 
-mixin {
-    // MixinGradle Settings
-    add sourceSets.main, 'atmosphericnether.refmap.json'
-    config 'atmosphericnether.mixins.json'
-}
+//mixin {
+//    // MixinGradle Settings
+//    add sourceSets.main, 'atmosphericnether.refmap.json'
+//    config 'atmosphericnether.mixins.json'
+//}
 
 tasks.named('processResources', ProcessResources).configure {
     var replaceProperties = [
