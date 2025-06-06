@@ -10,7 +10,7 @@ version = '2.0.0-1.19.4-to-1.20.4'
 group = 'net.thebrewingminer.atmospheric_nether'
 
 base {
-    archivesName = 'atmospheric_nether'
+    archivesName = 'atmospheric_nether_forge'
 }
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
