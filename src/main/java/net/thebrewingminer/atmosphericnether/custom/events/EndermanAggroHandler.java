@@ -89,7 +89,16 @@ public class EndermanAggroHandler {
 
         // Play aggressive sounds at the enderman and set its target to the closest player.
         if (closestPlayer != null) {
-            enderman.playStareSound();
+            enderman.level().playSound(
+                    null,
+                    enderman.getX(),
+                    enderman.getY(),
+                    enderman.getZ(),
+                    SoundEvents.ENDERMAN_STARE,
+                    enderman.getSoundSource(),
+                    2.5F,
+                    1.0F
+            );
             enderman.level().playSound(
                     null,
                     enderman.getX(),
